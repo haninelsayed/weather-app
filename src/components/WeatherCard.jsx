@@ -1,4 +1,4 @@
-import WEATHER_EMOJIS from "../data/weather-emojis.JS";
+import WEATHER_EMOJIS from "../data/weather-emojis.js";
 
 export default function WeatherCard({ weather, unit }) {
     function getWeatherEmoji(condition) {
