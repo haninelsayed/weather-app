@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f7c7ec, #f69bd2);
+  color: bisque;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 1rem auto;
+  gap: 1.5rem;
+  /* text-align: center;
+  margin: 4rem 0 2rem 0;
+  animation: fadeIn 1s ease-in-out; */
+}
+
+#header img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  background: none;
+  transform: transform 0.3s;
+}
+
+#searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0; /
+}
+
+#searchbar input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-right: none; 
+  border-radius: 50px 0 0 50px; 
+  outline: none;
+  width: 200px;
+  background-color: #fff7ec;
+  color: #5c3d2e;
+}
+
+#searchbar button {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  background-color: #f4aab9;
+  color: #5c3d2e;
+  border: 1px solid #f4aab9;
+  border-left: none; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchbar button:first-of-type {
+  border-radius: 0 50px 50px 0; 
+}
+
+#searchbar button:last-of-type {
+  margin-left: 0.5rem; 
+  border-radius: 50px;
+  background-color: #f0c9b7; 
+  border: none;
+}
+
+#searchbar button:hover {
+  background-color: #f093a2;
+  transform: scale(1.05);
+}
+
+#searchbar button:last-of-type:hover {
+  background-color: #eabfb0;
+}
+
+
+.weather-card {
+  margin-top: 2rem;
+  background: #f481c652; 
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-card img {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+}
+
+
+.loading-spinner {
+  margin-top: 2rem;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  margin-top: 1rem;
+  font-weight: bold;
+}
